@@ -1,13 +1,10 @@
 #include <iostream>
 using namespace std;
-#define REPEAT 3
-int main() {
-    int num, calc = 1;
-    int arrCount[10] = { 0 };
-    for (int i = 0; i < REPEAT; i++) {
-        cin >> num;
-        calc *= num;
-    }
+
+int main() { int arrCount[10] = { 0 };
+    int A, B, C, calc;
+    cin >> A >> B >> C;
+    calc = A * B * C;
     for (; calc > 0; calc /= 10) {
         arrCount[calc % 10]++;
     }
