@@ -9,8 +9,7 @@ int main() {
         calc *= num;
     }
     for (; calc > 0; calc /= 10) {
-        num = calc % 10;
-        arrCount[num]++;
+        arrCount[calc % 10]++;
     }
     for (int i = 0; i < 10; i++) {
         cout << arrCount[i] << endl;
