@@ -1,16 +1,18 @@
-#include <stdio.h>
-int main(void) {
-    int input, sum = 1;
-    int num[10] = {0, };
-    for (int i = 0; i < 3; i++) {
-        scanf("%d", &input);
-        sum *= input;
+#include <iostream>
+using namespace std;
+#define REPEAT 3
+int main() {
+    int num, calc = 1;
+    int arrCount[10] = { 0 };
+    for (int i = 0; i < REPEAT; i++) {
+        cin >> num;
+        calc *= num;
     }
-    for (int i = 0; sum > 0; i++) {
-        input = sum % 10;
-        num[input] += 1;
-        sum /= 10;
+    for (; calc > 0; calc /= 10) {
+        num = calc % 10;
+        arrCount[num]++;
     }
-    for (int i = 0; i < 10; i++) printf("%d\n", num[i]);
-    return 0;
-}
+    for (int i = 0; i < 10; i++) {
+        cout << arrCount[i] << endl;
+    }
+return 0; }
