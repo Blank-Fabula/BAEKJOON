@@ -14,7 +14,7 @@ int main() { int N, M;
 				if (arrNum[i] + arrNum[j] + arrNum[k] <= M
 					&& arrNum[i] + arrNum[j] + arrNum[k] > sum) {
 					sum = arrNum[i] + arrNum[j] + arrNum[k];
-                }
+                		}
 			}
 		}
 	}
