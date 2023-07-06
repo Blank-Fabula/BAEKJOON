@@ -1,15 +1,18 @@
-void hanoi(num, a,b,c) {
-	if (num == 1) printf("%d %d\n", a, c);
+#include <iostream>
+using namespace std;
+
+void hanoi(int, int, int, int);
+int main() { int num;
+	cin >> num;
+	cout << (1 << num) - 1 << "\n";
+	hanoi(num, 1, 2, 3);
+return 0; }
+
+void hanoi(int num, int a, int b, int c) {
+	if (num == 1) cout << a << " " << c << "\n";
 	else {
 		hanoi(num - 1, a, c, b);
-		printf("%d %d\n", a, c);
+		cout << a << " " << c << "\n";
 		hanoi(num - 1, b, a, c);
 	}
-    return;
-}
-int main(num) {
-	scanf("%d", &num);
-	printf("%d\n", (1 << num) - 1);
-	hanoi(num, 1, 2, 3);
-	return 0;
-}
+return; }
