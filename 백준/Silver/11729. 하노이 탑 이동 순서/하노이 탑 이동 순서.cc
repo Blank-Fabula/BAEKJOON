@@ -9,10 +9,13 @@ int main() { int num;
 return 0; }
 
 void hanoi(int num, int a, int b, int c) {
-	if (num == 1) cout << a << " " << c << "\n";
+	if (num == 1) {
+		cout << a << " " << c << "\n";
+		return;
+	}
 	else {
 		hanoi(num - 1, a, c, b);
 		cout << a << " " << c << "\n";
 		hanoi(num - 1, b, a, c);
 	}
-return; }
+}
