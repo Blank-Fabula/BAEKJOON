@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
+
 int main() { int num;
     cin >> num;
     pair<int, int> coord;
