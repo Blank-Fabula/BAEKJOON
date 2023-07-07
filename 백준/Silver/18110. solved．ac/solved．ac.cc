@@ -3,7 +3,7 @@
 using namespace std;
 
 int arrOpinion[31];
-int main() {
+int main() { ios::sync_with_stdio(0); cin.tie(0);
     int n; cin >> n;
     if (n == 0) { cout << 0;
         return 0;
