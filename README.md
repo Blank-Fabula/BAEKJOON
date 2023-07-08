@@ -1,2 +1,2 @@
 # BAEKJOON
-#### Repository for recording BEAKJOON problem solving
+#### Repository for recording BEAKJOON problem solving.
