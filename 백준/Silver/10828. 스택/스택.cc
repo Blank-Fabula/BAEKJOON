@@ -9,8 +9,7 @@ int main() {
     cin.tie(NULL); cout.tie(NULL);
     int N; cin >> N;
     for (int size = 0; N!=0; N--) {
-        string word;
-        cin >> word;
+        string word; cin >> word;
         size = stack(word, size);
     }
 return 0; }
