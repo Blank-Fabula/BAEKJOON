@@ -2,9 +2,10 @@
 using namespace std;
 
 int lan[10000];
-int main() { ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    int K, N; cin >> K >> N;
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+	int K, N; cin >> K >> N;
 	int  maxvalue = 0;
 	for (int i = 0; i < K; i++) {
 		cin >> lan[i];
