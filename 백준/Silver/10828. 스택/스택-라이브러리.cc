@@ -8,7 +8,7 @@ int main() {
     cin.tie(NULL); cout.tie(NULL);
     stack<int> stack;
     int N; cin >> N;
-    for (int size = 0; N!=0; N--) {
+    while (N--) {
         string word; cin >> word;
         if (word == "push") {
             int num; cin >> num;
