@@ -18,7 +18,7 @@ int stack(string word, int size) {
     if (word == "push") {
         cin >> arr[size];
         size++;
-	}
+    }
     else if (word == "pop") {
         if (arr[size - 1]) {
             cout << arr[size - 1] << "\n";
@@ -35,7 +35,7 @@ int stack(string word, int size) {
         else cout << 1 << "\n";
     }
     else if (word == "top") {
-        if (arr[size - 1])cout << arr[size - 1] << "\n";
+        if (arr[size - 1]) cout << arr[size - 1] << "\n";
         else cout << -1 << "\n";
     }
 return size; }
