@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL), cout.tie(NULL);
-	pair<int, int> arrPairs[41];
+	pair<int, int> arrPairs[N_MAX + 1];
 	int cntZero = 1, cntOne = 0;
 	for (int tmp, num = 0; num <= N_MAX; num++) {
 		arrPairs[num] = make_pair(cntZero, cntOne);
