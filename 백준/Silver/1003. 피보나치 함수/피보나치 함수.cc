@@ -8,9 +8,9 @@ int main() {
 	cin.tie(NULL), cout.tie(NULL);
 	pair<int, int> arrPairs[N_MAX + 1];
 	int cntZero = 1, cntOne = 0;
-	for (int tmp, num = 0; num <= N_MAX; num++) {
+	for (int num = 0; num <= N_MAX; num++) {
 		arrPairs[num] = make_pair(cntZero, cntOne);
-		tmp = cntZero;
+		int tmp = cntZero;
 		cntZero = cntOne;
 		cntOne += tmp;
 	}
