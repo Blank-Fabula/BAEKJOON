@@ -1,45 +1,34 @@
 #include <iostream>
 #include <vector>
-
+#include <queue>
 using namespace std;
 
-void dfs(int node, vector<vector<int>>& graph, vector<bool>& visited) {
-    visited[node] = true;
-    for (int neighbor : graph[node]) {
-        if (!visited[neighbor]) {
-            dfs(neighbor, graph, visited);
-        }
-    }
-}
-
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL), cout.tie(NULL);
-
-    int numComputers;
-    cin >> numComputers;
-
-    vector<vector<int>> graph(numComputers + 1);
-    int numConnections;
-    cin >> numConnections;
-    for (int i = 0; i < numConnections; i++) {
-        int a, b;
-        cin >> a >> b;
-        graph[a].push_back(b);
-        graph[b].push_back(a);
-    }
-
-    vector<bool> visited(numComputers + 1, false);
-    dfs(1, graph, visited);
-
-    int numInfected = 0;
-    for (int i = 2; i <= numComputers; i++) {
-        if (visited[i]) {
-            numInfected++;
+        ios::sync_with_stdio(false);
+        cin.tie(NULL), cout.tie(NULL);
+        int cntMax; cin >> cntMax;
+        int cntChain; cin >> cntChain;
+        vector<vector<int>> vtrChain(cntMax + 1);
+        for (int i = 0; i < cntChain; i++) {
+                int A, B; cin >> A >> B;
+                vtrChain[A].push_back(B);
+                vtrChain[B].push_back(A);
         }
-    }
-
-    cout << numInfected << "\n";
-
-    return 0;
-}
+        vector<bool> vtrVirus(cntMax + 1, false);
+        queue<int> q;
+        q.push(1);
+        vtrVirus[1] = true;
+        int cntVirus = 0;
+        while (!q.empty()) {
+                int node = q.front();
+                q.pop();
+                cntVirus++;
+                for (int neighbor : vtrChain[node]) {
+                        if (!vtrVirus[neighbor]) {
+                                q.push(neighbor);
+                                vtrVirus[neighbor] = true;
+                        }
+                }
+        }
+        cout << cntVirus - 1;
+return 0; }
