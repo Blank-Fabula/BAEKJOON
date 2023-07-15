@@ -3,8 +3,8 @@
 using namespace std;
 
 int main(int avg, char** argv) {
-	ios::sync_with_stdio(0);
-	cin.tie(0); cout.tie(0);
+	ios::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
 	deque<int> D;
 	int N; cin >> N;
 	for (int i = 0; i < N; i++) {
