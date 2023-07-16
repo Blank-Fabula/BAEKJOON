@@ -3,7 +3,7 @@
 using namespace std;
 
 int arr_Wine[10001];
-int arr_dp[100001];
+int arr_dp[10001];
 int main(int avg, char** argv) {
     ios::sync_with_stdio(false);
     cin.tie(NULL), cout.tie(NULL);
