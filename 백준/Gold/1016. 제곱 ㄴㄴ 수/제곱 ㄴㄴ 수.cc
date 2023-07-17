@@ -2,7 +2,7 @@
 using namespace std;
 
 bool arr[1000001];
-int main(int avg, char** argv) {
+int main(int argc, char** argv) {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL), cout.tie(NULL);
 	long long min, max; cin >> min >> max;
