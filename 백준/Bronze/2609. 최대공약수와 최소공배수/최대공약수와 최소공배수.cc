@@ -3,7 +3,7 @@ using namespace std;
 
 int gcd(int, int);
 int lcm(int, int);
-int main() {
+int main(int argc, char** argv) {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL); cout.tie(NULL);
 	int A, B; cin >> A >> B;
