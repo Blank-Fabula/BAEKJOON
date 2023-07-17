@@ -3,7 +3,7 @@
 #include <algorithm> 
 using namespace std;
 
-int main(int avg, char** argv) {
+int main(int argc, char **argv) {
 	while (true) {
 		string N;  cin >> N;
 		if (N == "0") break;
