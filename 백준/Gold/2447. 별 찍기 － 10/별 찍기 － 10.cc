@@ -23,4 +23,3 @@ void star(int N, int len, int wid) {
 		} else { star(N / 3, len, wid); }
 	}
 return; }
- 
