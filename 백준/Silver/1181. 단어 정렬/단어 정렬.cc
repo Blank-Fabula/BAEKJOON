@@ -10,6 +10,8 @@ struct Compare_Word {
     }
 };
 int main(int argc, char** argv) {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL), cout.tie(NULL);
     int N; cin >> N;
     set<string, Compare_Word> set_Word;
     for (int i = 0; i < N; ++i) {
