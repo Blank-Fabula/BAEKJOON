@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int main() { int arrCount[10] = { 0 };
+int main(int argc, char** argv) {
+    int arrCount[10] = { 0 };
     int A, B, C, calc;
     cin >> A >> B >> C;
     calc = A * B * C;
