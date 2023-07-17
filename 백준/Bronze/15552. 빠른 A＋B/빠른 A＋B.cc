@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
-int main(){ cin.tie(NULL);
-ios_base::sync_with_stdio(false);
+int main(int argc, char** argv){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL), cout.tie(NULL);
     int testCase, A, B;
     cin >> testCase;
     while (testCase--) {
