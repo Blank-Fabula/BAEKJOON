@@ -2,7 +2,7 @@
 using namespace std;
 
 int factorial(int);
-int main(void) {
+int main(int argc, char **argv) {
     int N, k;
     cin >> N >> k;
     cout << factorial(N) / (factorial(k) * factorial(N - k));
