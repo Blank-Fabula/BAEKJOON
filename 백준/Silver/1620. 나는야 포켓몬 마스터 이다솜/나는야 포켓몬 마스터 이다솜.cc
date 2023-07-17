@@ -12,19 +12,15 @@ int main(int avg, char** argv) {
     map<string, int> m_;
     vector<string> v_s_Name(N + 1);
     for (int i = 1; i <= N; i++) {
-        string s_; cin >> s_;
-        v_s_Name[i] = s_;
-        m_.insert(make_pair(s_, i));
+        cin >> v_s_Name[i];
+        m_.insert(make_pair(v_s_Name[i], i));
     }
     while (M--) {
         string s_; cin >> s_;
-        int num;
         if (isdigit(s_[0])) {
-            num = stoi(s_);
-            cout << v_s_Name[num] << '\n';
+            cout << v_s_Name[stoi(s_)] << '\n';
         } else {
-            auto it = m_.find(s_);
-            cout << it->second << '\n';
+            cout << m_[s_] << '\n';
         }
     }
 return 0; }
