@@ -1,35 +1,25 @@
-#include<stdio.h>
+#include <iostream>
+using namespace std;
 
-void star_Box(int y, int x, int Num);
-
-int main(void) {
-
-	int Num;
-	scanf("%d", &Num);
-
-	for (int i = 0; i < Num; i++) {
-		for (int j = 0; j < Num; j++) {
-			star_Box(i, j, Num);
+void star(int, int, int);
+int main(int avg, char** argv) {
+	ios::sync_with_stdio(false);
+	cin.tie(NULL), cout.tie(NULL);
+	int N; cin >> N;
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
+			star(N, i, j);
 		}
-		printf("\n");
+		cout << '\n';
 	}
+return 0; }
 
-	return 0;
-}
-
-void star_Box(int y, int x, int Num) {
-
-	if ((y/Num % 3 == 1) && (x/Num % 3 == 1)) {
-		printf(" ");
+void star(int N, int len, int wid) {
+	if (len / N % 3 == 1 && wid / N % 3 == 1) {
+		cout << " ";
 	}
 	else {
-		if (Num / 3 == 0) {
-			printf("*");
-		}
-		else {
-			star_Box(y, x, Num / 3);
-		}
+		if (N < 3) { cout << "*";
+		} else { star(N / 3, len, wid); }
 	}
-
-	return;
-}
+return; }
