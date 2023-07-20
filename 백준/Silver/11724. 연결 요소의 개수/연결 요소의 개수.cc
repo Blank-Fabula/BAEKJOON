@@ -23,10 +23,10 @@ int main(int argc, char** argv) {
     cout << cnt;
 return 0; }
 
-int dfs(int cnt, int N) {
-    visit[N] = true;
-    for (int j = 0; j < v_Graph[N].size(); j++) {
-        int next = v_Graph[N][j];
+int dfs(int cnt, int num) {
+    visit[num] = true;
+    for (size_t i = 0; i < v_Graph[num].size(); i++) {
+        int next = v_Graph[num][i];
         if (!visit[next]) { dfs(cnt, next); }
     } cnt++;
 return cnt; }
