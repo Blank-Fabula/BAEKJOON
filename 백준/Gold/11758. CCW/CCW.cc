@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
     int x2, y2; cin >> x2 >> y2;
     int x3, y3; cin >> x3 >> y3;
     int temp = x1 * y2 + x2 * y3 + x3 * y1;
-    temp = temp - y1 * x2 - y2 * x3 - y3 * x1;
+    temp -= y1 * x2 + y2 * x3 + y3 * x1;
     if (temp > 0) { cout << 1;
     } else if (temp < 0) { cout << -1;
     } else { cout << 0; }
