@@ -13,8 +13,7 @@ int main(int argc, char** argv) {
 			string(v_str_Set[i - 1].length(), ' ') +
 			v_str_Set[i - 1];
 	}
-	int n;
-	while (cin >> n) {
-		cout << v_str_Set[n] << "\n";
+	for (int n; cin >> n;) {
+		cout << v_str_Set[n] << '\n';
 	}
 return 0; }
