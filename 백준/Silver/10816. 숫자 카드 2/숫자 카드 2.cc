@@ -1,11 +1,11 @@
 #include <iostream>
-#include <map>
+#include <unordered_map>
 using namespace std;
 
 int main(int argc, char** argv) {
     ios::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
-    map<int, int> m_Card;
+    unordered_map<int, int> m_Card;
     int n; cin >> n;
     for (int i = 0; i < n; ++i) {
         int nNum; cin >> nNum;
