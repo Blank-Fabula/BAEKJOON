@@ -4,9 +4,9 @@
 
 ### 성능 요약
 
-메모리: 2020 KB, 시간: 0 ms
-(sort) 메모리: 2020 KB, 시간: 0 ms
-(priority_queue) 메모리: 2020 KB, 시간: 0 ms
+메모리: 2020 KB, 시간: 0 ms<br>
+(sort) 메모리: 2020 KB, 시간: 0 ms<br>
+(priority_queue) 메모리: 2020 KB, 시간: 0 ms<br>
 
 ### 분류
 
