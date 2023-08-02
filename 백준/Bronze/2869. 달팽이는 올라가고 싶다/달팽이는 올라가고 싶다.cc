@@ -1,8 +1,8 @@
 #include <iostream>
 
-int main() { int A, B, V;
+int main(int argc, char** argv) {
+	int A, B, V;
 	std::cin >> A >> B >> V;
-	int snail = (V - A) / (A - B) + 1;
-	if ((V - A) % (A - B) != 0) snail++;
+	int snail = (V - B - 1) / (A - B) + 1;
 	std::cout << snail;
 return 0; }
