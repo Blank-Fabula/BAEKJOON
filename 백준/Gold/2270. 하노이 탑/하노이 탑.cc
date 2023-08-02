@@ -31,17 +31,17 @@ void inPole() {
         while (p[i]--) {
             int plateValue; cin >> plateValue;
             pole[plateValue] = i + 1;
-	}
+        }
     }
 }
 
 int moveCnt = 0;
 int hanoi(int plate, int nextPole) {
-	if (plate == 0) { return moveCnt; }
-	int currentPlate = pole[plate];
-	int restPole = 6 - currentPlate - nextPole;
-	if (currentPlate == nextPole) { hanoi(--plate, nextPole);
+    if (plate == 0) { return moveCnt; }
+    int currentPlate = pole[plate];
+    int restPole = 6 - currentPlate - nextPole;
+    if (currentPlate == nextPole) { hanoi(--plate, nextPole);
     } else { moveCnt = (moveCnt + power2[plate - 1]) % DIVISOR;
-    hanoi(--plate, restPole);
+        hanoi(--plate, restPole);
     }
 return moveCnt; }
