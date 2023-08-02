@@ -11,7 +11,8 @@ int hanoi(int, int);
 int main(int argc, char** argv) {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL); cout.tie(NULL);
-	int n; cin >> n; power(n);
+	int n; cin >> n;
+    power(n);
 	int a, b, c; cin >> a >> b >> c;
 	int plateValue;
 	while (a--) { cin >> plateValue;
