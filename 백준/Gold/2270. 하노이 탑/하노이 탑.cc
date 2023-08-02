@@ -13,16 +13,12 @@ int main(int argc, char** argv) {
 	cin.tie(NULL); cout.tie(NULL);
 	int n; cin >> n;
     power(n);
-	int a, b, c; cin >> a >> b >> c;
-	int plateValue;
-	while (a--) { cin >> plateValue;
-		pole[plateValue] = 1;
-	}
-	while (b--) { cin >> plateValue;
-		pole[plateValue] = 2;
-	}
-	while (c--) { cin >> plateValue;
-		pole[plateValue] = 3;
+	int p[3]; cin >> p[0] >> p[1] >> p[2];
+	for (int i = 0; i < 3; i++) {
+		while (p[i]--) {
+			int plateValue; cin >> plateValue;
+			pole[plateValue] = i + 1;
+		}
 	}
 	int result = hanoi(n, pole[n]);
 	cout << pole[n] << '\n' << result;
