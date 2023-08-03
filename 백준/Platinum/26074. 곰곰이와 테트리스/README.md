@@ -44,5 +44,5 @@
 
 ### 출력 
 
- <p>곰곰이가 이기는 경우에는 <span style="color:#e74c3c;">GomGom</span>, 총총이가 이기는 경우에는 <span style="color:#e74c3c;">ChongChong</span>을 출력한다.</p>
+ <p>곰곰이가 이기는 경우에는 <span style="color:#e74c3c;"><strong>GomGom</strong></span>, 총총이가 이기는 경우에는 <span style="color:#e74c3c;"><strong>ChongChong</strong></span>을 출력한다.</p>
 
