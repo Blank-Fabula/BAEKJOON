@@ -6,7 +6,7 @@ int main(int argc, char** argv) {
     cin.tie(NULL); cout.tie(NULL);
     int N; cin >> N;
     int calc = 0;
-    while(N--) {
+    while (N--) {
         int A; cin >> A;
         calc ^= A - 2;
     }
