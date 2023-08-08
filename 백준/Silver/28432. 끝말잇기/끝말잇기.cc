@@ -4,7 +4,7 @@
 #include <algorithm>
 using namespace std;
 
-bool ok(int&, vector<string>&);
+bool check(int&, vector<string>&);
 int main(int argc, char** argv) {
     ios::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
@@ -17,11 +17,11 @@ int main(int argc, char** argv) {
     int M; cin >> M;
     for (int i = 0; i < M; i++) {
         cin >> words[q];
-        if (ok(N, words)) { cout << words[q] << '\n'; }
+        if (check(N, words)) { cout << words[q] << '\n'; }
     }
-}
+return 0; }
 
-bool ok(int& N, vector<string>& S) {
+bool check(int& N, vector<string>& S) {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < i; j++) {
             if (S[i] == S[j]) { return false; }
