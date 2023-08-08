@@ -6,8 +6,7 @@ int main(int argc, char** argv) {
     ios::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
     int N, M, Q; cin >> N >> M >> Q;
-    vector<long long> rSum(N);
-    vector<long long> cSum(M);
+    vector<long long> rSum(N), cSum(M);
     while (Q--) {
         int num, rc, v;
         cin >> num >> rc >> v;
