@@ -1,16 +1,11 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int factorial(int);
-int main(int argc, char **argv) {
-    int N, k;
-    cin >> N >> k;
-    cout << factorial(N) / (factorial(k) * factorial(N - k));
+int main(int argc, char* argv[]) {
+    int N, K; cin >> N >> K;
+    int result = 1;
+    for (int i = 1; i <= K; i++) {
+        result *= N - i + 1;
+        result /= i;
+    } cout << result;
 return 0; }
-
-int factorial(int N) {
-    if (N <= 1) {
-        return 1;
-    }
-    else { return N * factorial(N - 1); }
-}
