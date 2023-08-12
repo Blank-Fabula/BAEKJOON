@@ -13,6 +13,6 @@ int main(int argc, char** argv) {
 	while (cnt < integer) { s.push(++cnt); result.push_back('+'); }
 		if (s.top() != integer) { cout << "NO"; return 0; }
 		s.pop(); result.push_back('-');
-	}
-	for (int i = 0; i < result.size(); i++) { cout << result[i] << '\n'; }
+	} int size = result.size();
+	for (int i = 0; i < size; i++) { cout << result[i] << '\n'; }
 return 0; }
