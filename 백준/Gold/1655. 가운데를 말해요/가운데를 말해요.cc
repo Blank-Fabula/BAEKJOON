@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
 	priority_queue<int, vector<int>, less<int>> heap_right;
 	priority_queue<int, vector<int>, greater<int>> heap_left;
 	int N; cin >> N;
-	for (int i = 0; i < N; i++) {
+	while (N--) {
 		int integer; cin >> integer;
 		heap_right.push(integer);
 		while (heap_right.size() - heap_left.size() > 1) {
