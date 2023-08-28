@@ -13,8 +13,7 @@ int main(int argc, char** argv) {
 			} else { p_[i] = { false, rank }; }
 		}
 		int cnt = 0;
-        while (!p_.empty()) {
-            bool print = true;
+        while (!p_.empty()) { bool print = true;
             for (int i = 1; i < p_.size(); i++) {
                 if (p_[0].second < p_[i].second) { print = false; break; }
             }
