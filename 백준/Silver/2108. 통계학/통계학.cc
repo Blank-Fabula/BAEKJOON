@@ -6,6 +6,8 @@
 using namespace std;
 
 int main(int argc, char** argv) {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
 	int numCnt[8001] = { 0 };
 	double sum = 0;
 	int N; cin >> N;
@@ -22,10 +24,9 @@ int main(int argc, char** argv) {
 			maxNums.insert(nums[i]);
 			maxCnt = numCnt[nums[i] + 4000];
 		}
-	}
+	} if (maxNums.size() > 1) { maxNums.erase(*maxNums.begin()); }
 	cout << (int)round(sum / N) << '\n';
 	cout << nums[N / 2] << '\n';
-	if (maxNums.size() > 1) { maxNums.erase(*maxNums.begin()); }
 	cout << *maxNums.begin() << '\n';
 	cout << nums.back() - nums.front();
 return 0; }
