@@ -1,19 +1,20 @@
-#include <stdio.h> //standard_input_output.header_file;
-#include <string.h> //sting.header_file;
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
 
-int main(void) { //main_start;
-    char S[1000000]; //Sentence;
-    scanf("%[^\n]s", S); //input_Sentence;
-    int SC=1; //Sentence_Count;
-    int SS = strlen(S); //Sentence_Strlen;
-    if (S[0] == ' '){
-        SC--;
-        if (SS == 1){ printf("0"); return 0; }
-    } //if_Sentence_only_one_space;
-    for (int i = 0; i < SS-1; i++) { 
-        if (S[i] == ' ') { SC++; } 
-    } //Sentence_Count;
-    printf("%d", SC); //print_Sentence_Count;
-
-    return 0; //return_0;
-} //main_end;
+vector<char> s;
+int main(int argc, char** argv) {
+    ios::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+	string str; getline(cin, str);
+	if (str.size() == 0) { cout << 0; return 0; }
+	for (char c : str) { s.push_back(c); }
+	if (s.size() && s.front() == ' ') { s.erase(s.begin()); }
+	if (s.size() && s.back() == ' ') { s.resize(s.size() - 1); }
+	int result = 0;
+	for (int i = 0; i < s.size(); i++) {
+		if (s[i] == ' ') { result++; }
+		if (i + 1 == s.size()) { result++; }
+	} cout << result << '\n';
+return 0; }
