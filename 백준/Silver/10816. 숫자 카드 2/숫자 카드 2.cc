@@ -5,15 +5,9 @@ using namespace std;
 int main(int argc, char** argv) {
     ios::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
-    unordered_map<int, int> m_Card;
-    int n; cin >> n;
-    for (int i = 0; i < n; ++i) {
-        int nNum; cin >> nNum;
-        m_Card[nNum]++;
-    }
-    int m; cin >> m;
-    for (int i = 0; i < m; ++i) {
-        int mNum; cin >> mNum;
-        cout << m_Card[mNum] << ' ';
-    }
+    unordered_map<int, int> m_Cards;
+    int N; cin >> N;
+    for (int i = 0, NNum; i < N && cin >> NNum; i++) { m_Cards[NNum]++; }
+    int M; cin >> M;
+    for (int i = 0, MNum; i < M && cin >> MNum; i++) { cout << m_Cards[MNum] << " "; }
 return 0; }
