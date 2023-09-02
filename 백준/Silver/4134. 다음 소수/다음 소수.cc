@@ -2,6 +2,8 @@
 
 bool isPrime(long long&);
 int main(int argc, char** argv) {
+    std::ios::sync_with_stdio(false);
+	std::cin.tie(nullptr); std::cout.tie(nullptr);
 	int TC; std::cin >> TC;
 	while (TC--) {
 		long long N; std::cin >> N;
