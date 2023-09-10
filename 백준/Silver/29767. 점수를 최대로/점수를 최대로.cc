@@ -4,10 +4,11 @@
 typedef long long ll;
 
 ll solve(int& N, int& K) {
-    std::vector<ll> scores, dp(N);
-    std::cin >> dp[0]; scores.push_back(dp[0]);
-    for (int i = 1, num; i < N && (std::cin >> num); i++) {
-        dp[i] = dp[i - 1] + num; scores.push_back(dp[i]);
+    std::vector<ll> scores, dp(N + 1, 0);
+    for (int i = 1; i <= N; i++) {
+        int num; std::cin >> num;
+        dp[i] = dp[i - 1] + num;
+        scores.push_back(dp[i]);
     } std::sort(scores.begin(), scores.end());
     ll result = 0;
     for (int i = 0; i < K; i++, scores.pop_back()) {
