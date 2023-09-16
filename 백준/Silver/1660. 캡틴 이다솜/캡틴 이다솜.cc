@@ -3,8 +3,8 @@
 
 int main(int argc, char* argv[]) {
     std::vector<int> arr;
-    int N; std::cin >> N;
     int base = 1, max = 1;
+    int N; std::cin >> N;
     for (int bomb = 1; bomb <= N; bomb += max) {
         arr.push_back(bomb);
         max += base++ + 1;
