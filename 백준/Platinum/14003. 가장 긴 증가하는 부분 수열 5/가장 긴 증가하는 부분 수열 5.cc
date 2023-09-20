@@ -18,8 +18,9 @@ int main(int argc, char** argv) {
         } else { v[value] = arr_A[i]; }
     } cout << cnt << '\n';
     vector<int> result;
-    for (int i = N - 1; i >= 0 && cnt != 0; --i) {
-        if (check[i] == cnt - 1) { --cnt;
+    for (int i = N - 1; i >= 0; --i) {
+        if (cnt < 1) { break;
+        } else if (check[i] == cnt - 1) { --cnt;
             result.push_back(arr_A[i]);
         }
     }
