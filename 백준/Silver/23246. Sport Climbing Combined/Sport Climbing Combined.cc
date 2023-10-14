@@ -9,13 +9,9 @@ bool cmp(const std::tuple<int, int, int, int>& a, const std::tuple<int, int, int
 		int sumA = std::get<1>(a) + std::get<2>(a) + std::get<3>(a);
 		int sumB = std::get<1>(b) + std::get<2>(b) + std::get<3>(b);
 		if (sumA == sumB) { return std::get<0>(a) < std::get<0>(b); }
-		else {
-			if (sumA < sumB) { return true; }
-			else { return false; }
-		}
+        return sumA < sumB;
 	}
-	else if (productA < productB) { return true; }
-	else { return false; }
+	return productA < productB;
 }
 int main(int argc, char** argv) {
 	std::ios::sync_with_stdio(false); std::cin.tie(nullptr);
