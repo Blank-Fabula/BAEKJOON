@@ -7,6 +7,7 @@ date - 2024.02.14*/
 #include <string>
 
 #define targetTerminal "jinju"
+
 int main(int argc, char *argv[]) 
 {
     std::ios_base::sync_with_stdio(false);
