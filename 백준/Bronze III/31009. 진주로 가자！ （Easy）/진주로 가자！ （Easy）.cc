@@ -1,5 +1,5 @@
 /*making - Blank Fabula
-title - Baekjoon Problem.30969
+title - Baekjoon Problem.31009
 date - 2024.02.14*/
 
 #include <iostream>
@@ -7,11 +7,9 @@ date - 2024.02.14*/
 #include <string>
 
 #define targetTerminal "jinju"
+
 int main(int argc, char *argv[]) 
 {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    
     std::pair<int, int> answer = { 0, 0 };
 
     int N;
