@@ -11,16 +11,13 @@ long find(const long& tmp, const long& L)
 
 int main(int argc, char *argv[])
 {
-    std::ios_base::sync_with_stdio(0);
-    std::cin.tie(0);
-
     long a, b, L;
-    std::cin >> a >> b >> L;
+    scanf("%ld %ld %ld", &a, &b, &L);
 
     long tmp = std::lcm(a, b);
-    if (tmp == L) { std::cout << 1; }
-    else if (L % tmp) { std::cout << -1; }
-    else { std::cout << find(tmp, L); }
+    if (tmp == L) { printf("1"); }
+    else if (L % tmp) { printf("-1"); }
+    else { printf("%ld", find(tmp, L)); }
 
     return 0;
 }
