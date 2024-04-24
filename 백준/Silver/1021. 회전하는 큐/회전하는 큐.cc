@@ -7,8 +7,8 @@ int main(int argc, char **argv)
   int N, M;
   std::cin >> N >> M;
 
-  std::deque<int> dq(N);
-  std::iota(dq.begin(), dq.end(), 1);
+  std::vector<int> vec(N);
+  std::iota(vec.begin(), vec.end(), 1);
 
   int cnt = 0;
 
@@ -16,27 +16,20 @@ int main(int argc, char **argv)
   {
     std::cin >> num;
 
-    auto it = std::find(dq.begin(), dq.end(), num);
-    int distance = it - dq.begin(), distanceBack = N - distance;
-    if (distance <= distanceBack)
+    auto it = std::find(vec.begin(), vec.end(), num);
+    int dis = it - vec.begin(), disBack = vec.end() - it;
+    if (dis <= disBack)
     {
-      for (int tmp; distance--; ++cnt)
-      {
-        tmp = dq.front();
-        dq.pop_front();
-        dq.push_back(tmp);
-      }
+      cnt += dis;
+      std::rotate(vec.begin(), vec.begin() + dis, vec.end());
     }
     else 
     {
-      for (int tmp; distanceBack--; ++cnt)
-      {
-        tmp = dq.back();
-        dq.pop_back();
-        dq.push_front(tmp);
-      }
+      cnt += disBack;
+      std::rotate(vec.begin(), vec.end() - disBack, vec.end());
     }
-    dq.pop_front();
+
+    vec.erase(vec.begin());
   }
 
   std::cout << cnt;
