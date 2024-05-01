@@ -1,15 +1,25 @@
-#include <iostream>
-using namespace std;
+#include <bits/stdc++.h>
 
-int main(int argc, char** argv) {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
-    int result = 0, single = 0;
-    int N; cin >> N;
-    while (N--) {
-        int amount; cin >> amount;
-        result ^= amount;
-        single |= amount != 1;
-    } if (single) { result = !result; }
-    cout << (result ? "cubelover" : "koosaga");
-return 0; }
+int main(int argc, char **argv)
+{
+  std::cin.tie(0)->sync_with_stdio(0);
+  
+  int result = 0, one = 0;
+  
+  int N;
+  std::cin >> N;
+  
+  while (N--)
+  {
+    int num;
+    std::cin >> num;
+
+    result ^= num;
+    one |= num != 1;
+  }
+  one ? result = !result : result;
+  
+  std::cout << (result ? "cubelover" : "koosaga");
+  
+  return 0;
+}
