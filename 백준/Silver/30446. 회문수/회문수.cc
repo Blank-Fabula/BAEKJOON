@@ -1,4 +1,4 @@
-//문제 해결법 찾은후 관련 풀이 참조
+//문제 해결법 알아낸뒤 관련 풀이 참조
 #include <bits/stdc++.h>
 typedef unsigned long long int ull;
 
