@@ -6,18 +6,18 @@ int main(int argc, char **argv)
 
   std::string str; std::cin >> str;
 
-  int ans = 0; char prev = '(';;
+  int ans = 0; char prev = '(';
   std::stack<char> s;
 
   for (auto &curr : str)
   {
-    if (curr == '(') { s.push(curr); }
-    else
+    if (curr == ')')
     {
       if (prev == ')') { ans++; }
       else { ans += s.size() - 1; }
       s.pop();
     }
+    else { s.push(curr); }
     prev = curr;
   }
 
